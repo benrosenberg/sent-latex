@@ -1,0 +1,7 @@
+the next slide should be a wacky integral:
+
+$\displaystyle \int_{-\infty}^\infty \frac{1}{\sqrt{2\pi}}e^{-\frac{x^2}{2}}\,dx = 1
+
+and the next slide should be your mom's weight
+
+$\infty lbs
