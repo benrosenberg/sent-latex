@@ -16,6 +16,7 @@ will not:
 * [python](https://www.python.org/)
 * [latex](https://www.latex-project.org/get/) and pdflatex
 * [imagemagick](https://imagemagick.org/index.php)
+* the [bilinear scaling patch for sent] (https://tools.suckless.org/sent/patches/bilinear_scaling/) is *highly* recommended
 
 ## testing
 after cloning the repository:
