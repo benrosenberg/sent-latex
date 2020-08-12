@@ -47,5 +47,7 @@ finally, run `python convert-latex.py` and when prompted, enter the name of your
 
 now you can do `sent (filename).txt` and you will have epic gamer moment
 
-## disclaimer
-i don't know how to code
+### to-do list:
+* make it possible to caption equations
+* make it possible to display multiple equations
+* maybe even allow for other stuff? idk
