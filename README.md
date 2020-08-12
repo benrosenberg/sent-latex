@@ -35,18 +35,39 @@ to use this, first copy the `convert-latex.py` file into the same directory as t
 now, edit your txt file so that each equation is on its own page (empty line both before and after it). An example follows:
 
 ```
-first
-slide
-
 a command to display the latex equation "L=3" follows:
 
 !$$L=3$$
-
-final slide
 ```
+
+there's a more complex example at the end of the readme.
 
 make sure that you format it with the `latex_prefix` in front (in the above example and by default it's `!`; however, it can be easily changed in the `convert-latex.py` file). otherwise pdflatex will get have an aneurysm and your computer will explode.
 
 finally, run `python convert-latex.py` and when prompted, enter the name of your txt file (without the .txt). a lot of scary text will pop up (!) but then you will have some nice png files which will be referenced with proper syntax
 
 now you can do `sent (filename).txt` and you will have epic gamer moment
+
+### a more complex example sent file
+
+```
+the next slide should be a list:
+
+!\begin{enumerate} \item item \item $1+1=2$ \item item \end{enumerate}
+
+and the next slide should be your mom's weight
+
+!$$\infty$$
+
+the next slide should be a captioned equation:
+
+!caption: $equation$
+
+the next slide should be another captioned equation:
+
+!caption: \\ $equation$
+
+the next slide should be yet another captioned equation:
+
+!caption: \\ $$equation$$
+```
