@@ -11,15 +11,18 @@ print("This is the file_line_list:")
 print(file_line_list)
 file.close()
 
+# set prefix for latex within sent text file
+latex_prefix = '!'
+
 # get the lines with the latex demarcator in them (line begins with $)
 latex_lines = []
 for i in file_line_list:
-    if i[0] == '$':
+    if i[0] == latex_prefix:
         latex_lines.append(i)
 
 ## skeleton for latex .tex file
-before_eq_string = r"\documentclass[preview]{standalone}\begin{document}$"
-after_eq_string = r"$\end{document}"
+before_eq_string = r"\documentclass{article} \usepackage{amsmath} \begin{document} \thispagestyle{empty} \setlength{\parindent}{0pt}"
+after_eq_string = r"\end{document}"
 
 # run the lines with the latex demarcator through the latex2png script or something
 for i in range(len(latex_lines)):
@@ -37,6 +40,9 @@ for i in range(len(latex_lines)):
     # to specify output name: -jobname=STRING flag before the FILE flag at the end
     os.system('pdflatex ' + latex_filename + '.tex')
 
+    ## crop the pdf to remove excess whitespace
+    os.system('pdfcrop -margin 3 ' + latex_filename + '.pdf ' + latex_filename + '.pdf')
+
     ## create the png from the pdf (`convert -density 3000 file.pdf -quality 90 file.png`)
     os.system('convert -density 3000 ' + latex_filename + '.pdf -quality 90 ' + latex_filename + '.png')
 
@@ -46,7 +52,7 @@ for i in range(len(latex_lines)):
 # write a new file with the png references in it and overwrite the original filename
 latex_line_count = 0
 for i in range(len(file_line_list)):
-    if file_line_list[i] != '\n' and file_line_list[i][0] == '$':
+    if file_line_list[i] != '\n' and file_line_list[i][0] == latex_prefix:
         file_line_list[i] = '@' + filename + '-latex-' + str(latex_line_count) + '.png\n'
         latex_line_count += 1
 
