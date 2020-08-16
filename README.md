@@ -6,6 +6,7 @@ will:
 * capitalize on sent's ability to display images by having it display a latex png
 * turn your sent txt file from one with latex into one with image references instead
 * allow you to have basically whatever latex you want in a sent presentation, provided you know what the commands are
+* put comments in the line preceding the latex so that you don't lose the original latex when you run the script
 
 will not:
 * allow you to have latex in the same slide as regular text
