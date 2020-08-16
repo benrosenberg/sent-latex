@@ -53,7 +53,7 @@ for i in range(len(latex_lines)):
 latex_line_count = 0
 for i in range(len(file_line_list)):
     if file_line_list[i] != '\n' and file_line_list[i][0] == latex_prefix:
-        file_line_list[i] = '@' + filename + '-latex-' + str(latex_line_count) + '.png\n'
+        file_line_list[i] = '#' + file_line_list[i] + '\n@' + filename + '-latex-' + str(latex_line_count) + '.png\n'
         latex_line_count += 1
 
 file = open(filename + ".txt", "w")
