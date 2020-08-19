@@ -21,7 +21,7 @@ for i in file_line_list:
         latex_lines.append(i)
 
 ## skeleton for latex .tex file
-before_eq_string = r"\documentclass{article} \usepackage{amsmath} \begin{document} \thispagestyle{empty} \setlength{\parindent}{0pt}"
+before_eq_string = r"\documentclass{article} \usepackage{amsmath} \usepackage{amssymb} \begin{document} \thispagestyle{empty} \setlength{\parindent}{0pt}"
 after_eq_string = r"\end{document}"
 
 # run the lines with the latex demarcator through the latex2png script or something
