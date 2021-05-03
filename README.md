@@ -56,10 +56,6 @@ the next slide should be a list:
 
 !\begin{enumerate} \item item \item $1+1=2$ \item item \end{enumerate}
 
-and the next slide should be your mom's weight
-
-!$$\infty$$
-
 the next slide should be a captioned equation:
 
 !caption: $equation$
