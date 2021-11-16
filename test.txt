@@ -1,0 +1,24 @@
+Presentations with sent
+
+sent, from suckless.org:
+ - simple
+ - easy to use
+ - lightweight
+
+Downside?
+
+No LaTeX support!
+
+Solution: add LaTeX support
+
+Example: 
+
+#!$\text{\LaTeX support is cool!}$
+
+@test-latex-0.png
+
+#!$$\int_{-\infty}^x x^{-\alpha} e^{-x} \; \text dx$$
+
+@test-latex-1.png
+
+

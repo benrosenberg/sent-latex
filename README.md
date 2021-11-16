@@ -19,6 +19,10 @@ will not:
 * [latex](https://www.latex-project.org/get/) and pdflatex
 * [imagemagick](https://imagemagick.org/index.php)
 * the [bilinear scaling patch for sent](https://tools.suckless.org/sent/patches/bilinear_scaling/) is *highly* recommended
+* willingness to open up `/etc/ImageMagick-X/policy.xml` and edit a line 
+
+## installation
+after installing all dependencies and stuff, you need to edit the line in `/etc/ImageMagick-6/policy.xml` or whatever file corresponds to the version of ImageMagick you're using. see this stackoverflow post for details: [post](https://askubuntu.com/questions/1127260/imagemagick-convert-not-allowed)
 
 ## testing
 after cloning the repository:
